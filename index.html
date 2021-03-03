@@ -1,167 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MyLinkTree</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            body {
-                background-image: url(./img/unknow-design.png);
-                background-repeat: no-repeat;
-                background-position: center top;
-                background-size: cover;
-                color: #0c0264;
-                font-family: "century gothic", sans-serif;
-            }
-            .avatar {
-                width: 80px;
-                border-radius: 50%;
-                border: 3px solid white;
-                box-shadow: 0 0 20px #0c0264;
-            }
-            h1 {
-                font-family: "century gothic", sans-serif;
-                color: #0c0264;
-                font-weight: bold;
-                font-size: 30px;
-                margin-bottom: 2px;
-                text-shadow: 2px 1px 0px rgb(243, 111, 23);
-            }
-            h2 {
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLinkTree</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: url(./img/unknow-design.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;
+            color: #0c0264;
+            font-family: "century gothic", sans-serif;
+        }
+        
+        .avatar {
+            width: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 20px #0c0264;
+        }
+        
+        h1 {
+            font-family: "century gothic", sans-serif;
+            color: #0c0264;
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 2px;
+            text-shadow: 2px 1px 0px rgb(243, 111, 23);
+        }
+        
+        h2 {
             font-size: 16px;
-            }
-            .profile {
-                text-align: center;
-                margin-top: 20px;
-            }
-            .social-midia {
-                list-style: none;
-                max-width: 60%;
-                margin: 0 auto;
-                display: flex;
-                justify-content: space-around;
-            }
-            .social-midia img {
-                width: 33px;
-                margin: 20px 0;
-            }
-            .links-list {
-                list-style: none;
-            }
-            .links-list li {
-                margin: 10px 20px;
-            }
-            .links-list li a {
-                background-color: #0c0364;
-                box-shadow: 0 0 15px #1b0ba8;
-                padding: 20px;
-                display: block;
-                border-radius: 5px;
-                text-decoration: none;
-                color: #fff;
-                font-weight: bold;
-            }
-            
-            .links-list li a span {
-                color: rgb(243, 111, 23);
-                display: block;
-                margin-top: 10px;
-            }
-            #curso-fullstack {
-                background-color: rgb(1, 3, 29);
-                background-image: url(./img/thiago.png);
-                background-repeat: no-repeat;
-                background-position: left;
-                background-size: cover;
-                padding: 5px;
-                height: 120px;
-                margin: 10px 20px;
-                list-style: none;
-                border-radius: 5px;
-                box-shadow: 0 0 15px #1b0ba8; 
-            }
-            #curso-fullstack a {
-                padding: 20px;
-                display: block;
-                height: 80%;
-            }
-            .footer {
-                margin-top: 50px;
-                text-align: center;
-                padding: 10px 0;
-            }
-            .footer a {
-                text-decoration: none;
-            }
-            .footer a:visited {
-                color: #0c0364;
-            }
-        </style>
-    </head>
-    <body>
-        <!--Profile section-->
-        <div class="profile">
-            <img src="./img/avatar-paulo.jpg" alt="Thiago" class="avatar">
-            <h1>Paulo Sérgio S.</h1>
-            <h2>Programador | Designer</h2>
-        </div>
-        <ul class="social-midia"><!--É melhor usar ul > li para uso do flexbox-->
-            <li>
-                <a href="http://www.Instagram.com/paulo3452/" target="_blank">
-                    <img src="./img/insta.svg" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
-                    <img src="./img/linkedin.svg" alt="linkedin">
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/PauloHPMKT" target="_blank">
-                    <img src="./img/github.svg" alt="github">
-                </a>
-            </li>
-            <li>
-                <a href="http://wa.me/5585988704658" target="_blank">
-                    <img src="./img/whatsapp.png" alt="whatsapp">
-                </a>
-            </li>   
-        </ul>
-        <!--Menu links section-->
-        <ul class="links-list">
-            <li>
-                <a href="http://www.instagram.com/hpmarketingvisual">
+        }
+        
+        .profile {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .social-midia {
+            list-style: none;
+            max-width: 60%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .social-midia img {
+            width: 33px;
+            margin: 20px 0;
+        }
+        
+        .links-list {
+            list-style: none;
+        }
+        
+        .links-list li {
+            margin: 10px 20px;
+        }
+        
+        .links-list li a {
+            background-color: #0c0364;
+            box-shadow: 0 0 15px #1b0ba8;
+            padding: 20px;
+            display: block;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .links-list li a span {
+            color: rgb(243, 111, 23);
+            display: block;
+            margin-top: 10px;
+        }
+        /*-------------------------------------------BOTÃO CURSO FULLSTACK-----------------------------------------*/
+        
+        #curso-fullstack {
+            background-image: url(./img/fullstack.png);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: cover;
+            height: auto;
+            margin: 10px 20px;
+            list-style: none;
+            border-radius: 5px;
+            box-shadow: 0 0 15px #1b0ba8;
+        }
+        
+        .config-curso a {
+            text-align: center;
+            padding: 25px;
+            text-decoration: none;
+            padding: 20px;
+            display: block;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .config-curso span {
+            display: block;
+            font-size: 20px;
+        }
+        
+        .config-curso a .red {
+            font-size: 20px;
+            color: red;
+        }
+        
+        .config-curso a .display {
+            background-color: white;
+            color: #010620;
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+        /*-------------------------------------------FIM BOTÃO CURSO FULLSTACK-----------------------------------------*/
+        
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .footer a {
+            text-decoration: none;
+        }
+        
+        .footer a:visited {
+            color: #0c0364;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Profile section-->
+    <div class="profile">
+        <img src="./img/avatar-paulo.jpg" alt="Thiago" class="avatar">
+        <h1>Paulo Sérgio S.</h1>
+        <h2>Programador | Designer</h2>
+    </div>
+    <ul class="social-midia">
+        <!--É melhor usar ul > li para uso do flexbox-->
+        <li>
+            <a href="http://www.Instagram.com/paulo3452/" target="_blank">
+                <img src="./img/insta.svg" alt="Instagram">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
+                <img src="./img/linkedin.svg" alt="linkedin">
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/PauloHPMKT" target="_blank">
+                <img src="./img/github.svg" alt="github">
+            </a>
+        </li>
+        <li>
+            <a href="http://wa.me/5585988704658" target="_blank">
+                <img src="./img/whatsapp.png" alt="whatsapp">
+            </a>
+        </li>
+    </ul>
+    <!--Menu links section-->
+    <ul class="links-list">
+        <li>
+            <a href="http://www.instagram.com/hpmarketingvisual">
                     HP Marketing Visual
                     <span>Conheça meus trabalhos de designer e desenvolvimento web.</span>
                 </a>
-            </li>
-            <li>
-                <a href="http://www.instagram.com/hpdocesdatete" target="_blank">
+        </li>
+        <li>
+            <a href="http://www.instagram.com/hpdocesdatete" target="_blank">
                     Doces da Tetê
                     <span>Acesse nosso catálogo no feed.</span>  
                 </a>
-            </li>
-            <li>
-                <a href="https://thiago-medeiros.com/workshop/primeiros-passos-programacao-web/inscricao/" target="_blank">
+        </li>
+        <li>
+            <a href="https://thiago-medeiros.com/workshop/primeiros-passos-programacao-web/inscricao/" target="_blank">
                     Workshop 100% gratuito e online
                     <span>Quer dar os primeiros passos com programação Web?</span>
                 </a>
-            </li> 
-        </ul>
-        <ul>
-            <li id="curso-fullstack">
-                <a href=https://go.hotmart.com/W48336529X target="_blank">
-                </a>
-            </li> 
-        </ul>
-        <!--footer-->
-        <footer class="footer">
-            Developed by 
-            <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">HP Marketing Visual</a> 2021
-        </footer>
-    </body>
+        </li>
+
+    </ul>
+    <ul id="curso-fullstack">
+        <li class="config-curso">
+            <a href=https://go.hotmart.com/W48336529X target="_blank">
+                <span>FORMAÇÃO</span><span class="red"> FULLSTACK JAVASCRIPT</span><span class="display"> DO ZERO AO MERCADO</span>
+            </a>
+        </li>
+    </ul>
+
+    <!--footer-->
+    <footer class="footer">
+        Developed by
+        <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">HP Marketing Visual</a> 2021
+    </footer>
+</body>
+
 </html>
