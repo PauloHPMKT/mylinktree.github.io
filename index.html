@@ -1,212 +1,295 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyLinkTree | Paulo</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+                background-image: linear-gradient(#03043d, #040680, #020fa9);
+            }
+            body {
+                font-family: 'century gothic', sans-serif;
+                font-size: 15px;
+                color: #fff;
+                text-align: center;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyLinkTree</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            background-image: url(./img/unknow-design.png);
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-size: cover;
-            color: #0c0264;
-            font-family: "century gothic", sans-serif;
-        }
-        
-        .avatar {
-            width: 80px;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 20px #0c0264;
-        }
-        
-        h1 {
-            font-family: "century gothic", sans-serif;
-            color: #0c0264;
-            font-weight: bold;
-            font-size: 30px;
-            margin-bottom: 2px;
-            text-shadow: 2px 1px 0px rgb(243, 111, 23);
-        }
-        
-        h2 {
-            font-size: 16px;
-        }
-        
-        .profile {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .social-midia {
-            list-style: none;
-            max-width: 60%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-        }
-        
-        .social-midia img {
-            width: 33px;
-            margin: 20px 0;
-        }
-        
-        .links-list {
-            list-style: none;
-        }
-        
-        .links-list li {
-            margin: 10px 20px;
-        }
-        
-        .links-list li a {
-            background-color: #0c0364;
-            box-shadow: 0 0 15px #1b0ba8;
-            padding: 20px;
-            display: block;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-        
-        .links-list li a span {
-            color: rgb(243, 111, 23);
-            display: block;
-            margin-top: 10px;
-        }
-        /*-------------------------------------------BOTÃO CURSO FULLSTACK-----------------------------------------*/
-        
-        #curso-fullstack {
-            background-image: url(./img/fullstack.png);
-            background-repeat: no-repeat;
-            background-position: left;
-            background-size: cover;
-            height: auto;
-            margin: 10px 20px;
-            list-style: none;
-            border-radius: 5px;
-            box-shadow: 0 0 15px #1b0ba8;
-        }
-        
-        .config-curso a {
-            text-align: center;
-            padding: 25px;
-            text-decoration: none;
-            padding: 20px;
-            display: block;
-            border-radius: 5px;
-            color: #fff;
-            font-weight: bold;
-        }
-        
-        .config-curso span {
-            display: block;
-            font-size: 20px;
-        }
-        
-        .config-curso a .red {
-            font-size: 20px;
-            color: red;
-        }
-        
-        .config-curso a .display {
-            background-color: white;
-            color: #010620;
-            display: inline-block;
-            margin-top: 5px;
-            font-size: 18px;
-        }
-        /*-------------------------------------------FIM BOTÃO CURSO FULLSTACK-----------------------------------------*/
-        
-        .footer {
-            margin-top: 50px;
-            text-align: center;
-            padding: 10px 0;
-        }
-        
-        .footer a {
-            text-decoration: none;
-        }
-        
-        .footer a:visited {
-            color: #0c0364;
-        }
-    </style>
-</head>
+            /*-------------------------------hamburuger menu setting---------------------------*/
+            .botaoMenu {
+                width: 40px;
+                position: absolute;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                cursor: pointer;
+            }
+            .menuMobile {
+                position: absolute; /*absolute para ele flutuar sobre os itens*/
+                top: 0;
+                left: -100%; /*valor negativo deixa ele para fora da tela*/
+                transition: all 800ms;
+                margin: 10px 5px;
+                list-style: none;
+            }
+            .menuMobile li {
+                list-style: none;
+            }
+            .menuMobile li img {
+                width: 40px;
+                margin: 15px 0;
+            }
+            .menuMobile.menuAberto{
+                position: fixed;
+                left: 0%; 
+                top: 60px;   
+            }
 
-<body>
-    <!--Profile section-->
-    <div class="profile">
-        <img src="./img/avatar-paulo.jpg" alt="Thiago" class="avatar">
-        <h1>Paulo Sérgio S.</h1>
-        <h2>Programador | Designer</h2>
-    </div>
-    <ul class="social-midia">
-        <!--É melhor usar ul > li para uso do flexbox-->
-        <li>
-            <a href="http://www.Instagram.com/paulo3452/" target="_blank">
-                <img src="./img/insta.svg" alt="Instagram">
-            </a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
-                <img src="./img/linkedin.svg" alt="linkedin">
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/PauloHPMKT" target="_blank">
-                <img src="./img/github.svg" alt="github">
-            </a>
-        </li>
-        <li>
-            <a href="http://wa.me/5585988704658" target="_blank">
-                <img src="./img/whatsapp.png" alt="whatsapp">
-            </a>
-        </li>
-    </ul>
-    <!--Menu links section-->
-    <ul class="links-list">
-        <li>
-            <a href="http://www.instagram.com/hpmarketingvisual">
-                    HP Marketing Visual
-                    <span>Conheça meus trabalhos de designer e desenvolvimento web.</span>
-                </a>
-        </li>
-        <li>
-            <a href="http://www.instagram.com/hpdocesdatete" target="_blank">
-                    Doces da Tetê
-                    <span>Acesse nosso catálogo no feed.</span>  
-                </a>
-        </li>
-        <li>
-            <a href="https://thiago-medeiros.com/workshop/primeiros-passos-programacao-web/inscricao/" target="_blank">
-                    Workshop 100% gratuito e online
-                    <span>Quer dar os primeiros passos com programação Web?</span>
-                </a>
-        </li>
+            /*------------------------------------profile settings--------------------------------------*/
+            .container {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+            .container .profile {
+                text-align: center;
+            }
+            .container .profile img {
+                width: 85px;
+                border: 2px solid white;
+                border-radius: 50%;
+                margin-top: 30px;
+                box-shadow: 0 0 10px #f28d13;
+                animation: floating 2s ease-in-out infinite;
+            }
+            .container .profile h1 {
+                font-family: 'Orbitron', sans-serif;
+                letter-spacing: 2px;
+                color: white;
+                text-shadow: 1px 1px 3px #f28d13;
+                margin-top: 10px;
+            }
+            .container .profile span {
+                color: #e29024;
+                display: block;
+                font-size: 15pt;
+                font-weight: 100;
+                text-shadow: none;
+                margin-top: 7px;
+            }
+            .container .profile h2 {
+                font-size: 15px;
+                font-weight: 100;
+                color: white;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
 
-    </ul>
-    <ul id="curso-fullstack">
-        <li class="config-curso">
-            <a href=https://go.hotmart.com/W48336529X target="_blank">
-                <span>FORMAÇÃO</span><span class="red"> FULLSTACK JAVASCRIPT</span><span class="display"> DO ZERO AO MERCADO</span>
-            </a>
-        </li>
-    </ul>
+            /*-------------------------------list-links config-----------------------------*/
+            .list-links {
+                list-style: none;
+            }
+            .list-links li {
+                margin: 10px 20px;
+                font-size: 10px;
+            }
+            .list-links li span {
+                display: block;
+                font-weight: 100;
+                margin-top: 5px;
+            }
+            .list-links li a {
+                background-image: linear-gradient(180deg, #e29024, #cc6512);
+                box-shadow: 0 0 7px #432ff3;
+                padding: 20px;
+                display: block;
+                border-radius: 5px;
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+            }
+            .list-links li .btn-color-red {
+                background-image: linear-gradient(180deg, #db1f19, #a00808);
+                
+            }  
+            .list-links li .btn-color-blue {
+                background-image: linear-gradient(180deg, #3d92f3, #361bce)
+            }
 
-    <!--footer-->
-    <footer class="footer">
-        Developed by
-        <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">HP Marketing Visual</a> 2021
-    </footer>
-</body>
+            /*-------------------------------- hover effect -------------------------------*/
+            .list-links li a:hover {
+                background-image: linear-gradient(180deg, #cc6512, #e29024);
+            }
+            .list-links li .btn-color-red:hover {
+                background-image: linear-gradient(180deg, #a00808, #db1f19);    
+            }
+            .list-links li .btn-color-blue:hover {
+                background-image: linear-gradient(180deg, #361bce, #3d92f3);
+            }
 
+            /*-------------------------------- footer --------------------------------*/
+            .footer {
+                margin: 30px 0 0;
+                background-color: #060e53;
+                padding: 10px 0;
+            }
+            .footer a {
+                text-decoration: none;
+                color: #fff;
+                cursor: pointer;
+            }
+           
+            /*------------------------profile pic animation--------------------------------*/
+            @keyframes floating {
+                0% {
+                    transform: translatey(0px);
+                }
+                50% {
+                transform: translatey(-8px);
+                }
+                100% {
+                transform: translatey(0px);
+                }
+            }
+
+            @media (max-width: 420px) {
+                .container .profile {
+                    max-width: 85%;
+                    margin: 0 auto;
+                }
+                .container .profile h2 {
+                    font-size: 18px;
+                }
+
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <!----------------------------------------------------SETTING ASIDE MENU------------------------------------------------->
+        <img class="botaoMenu" src="./img/menu-hamb-removebg.png" alt="menu button">
+        <div class="menuMobile">
+            <ul>
+                <li>
+                    <a href="http://www.instagram.com/paulo3452" target="_blank">
+                        <img src="./img/instagram-ico-removebg.png" alt="linkInstagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
+                        <img src="./img/linkedin-removebg.png" alt="linkLinkedin">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/PauloHPMKT" target="_blank">
+                        <img src="./img/github-removebg.png" alt="linkGihub">
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="http://wa.me/5585988704658" target="_blank">
+                        <img src="./img/whatsapp-removebg.png" alt="linkWhatsapp">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!----------------------------------------------------SETTING MAIN LIST MENU------------------------------------------------->
+        <div class="container">
+            <div class="profile">
+                <img src="./img/avatar-pic.png" alt="avatar-paulo">
+                <h1>Paulo Sérgio  <span class="span-title">| Software developer & Designer</span></h1>
+                <h2 id="translate">Conheça meus trabalhos | entre em contato comigo</h2>
+            </div> 
+            <div>
+                <ul class="list-links">
+                    <li>
+                        <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">
+                            HP MARKETING VISUAL
+                            <span>Conheça meu trabalho de designer e desenvolvimento web e marketing digital.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.com/hpdocesdatete" target="_blank">
+                            DOCES DA TETÊ
+                            <span>Acesse nosso catálogo no feed.</span>  
+                        </a>
+                    </li>
+
+                    Cursos online | Invista em sua carreira
+                    <li>
+                        <a href="http://bit.ly/workshopGratuitoProgramacao" target="_blank"  class="btn-color-red">
+                            WORKSHOP PROGRAMAÇÃO 100% GRATUÍTO E ONLINE
+                            <span>Quer dar os primeiros passos com programação Web?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=https://bit.ly/fullstackjavaScript target="_blank" class="btn-color-red">
+                            CURSO FORMAÇÃO FULLSTACK JAVASCRIPT - DO ZERO AO MERCADO
+                            <span>Quer se tornar um desenvoledor de alto nível e entrar no radar das empresas?</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="http://bit.ly/fabricadeAppsSujeito" target="_blank" class="btn-color-red">
+                            FABRICA DE APLICATIVOS - REACT NATIVE
+                            <span>Crie Apps mobile nativos com uma das bibliotecas mais usadas no mundo</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://bit.ly/designCanvasonline" target="_blank" class="btn-color-blue">
+                            CURSO DESIGN CANVAS - DO BÁSICO AO AVANÇADO
+                            <span>Aprenda a criar seus próprios designes, crie seus próprios posts de conteúdo</span>
+                        </a>
+                    </li>
+                    Desenvolva suas habilidades e trabalhe com a internet
+                    <li>
+                        <a href="http://bit.ly/treinamentoCVLonline" target="_blank" class="btn-color-blue">
+                            TREINAMENTO CHORA OU VENDE LENÇOS - CVL
+                            <span>Quer aprender como trabalhar pela internet e formar sua renda através da internet?</span>
+                        </a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+        <footer class="footer">
+            Developed By <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">HP Marketing Visual</a> 2021
+         </footer>
+
+        <script>
+            
+            let menuMobile = document.querySelector('.menuMobile')
+            //menuMobile.classList.add('teste') // add adiciona uma class e remove retira
+            let botaoMenu = document.querySelector('.botaoMenu')
+            let dimension = document.querySelector('#dimension')
+
+
+            let aberto = false // flag variavel de controle (true === aberto // false === fechado)
+            //controlando o estado de uma aplicaçao 
+
+
+            botaoMenu.onclick = function abrirFechar() {
+
+                if(aberto === true) {
+                    aberto = false
+                    menuMobile.classList.remove('menuAberto')
+                    
+                    //botaoMenu.innerText = 'abrir menu'
+
+                } else if (aberto === false) {
+                    aberto = true
+                    menuMobile.classList.add('menuAberto') 
+                    //botaoMenu.innerText = 'fechar menu'
+                }
+                
+            }
+        </script>
+        
+    </body>
 </html>
