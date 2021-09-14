@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: linear-gradient(#03043d, #040680, #020fa9);
+}
+
+body {
+    font-family: 'century gothic', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*-------------------------------hamburuger menu setting---------------------------*/
+
+.botaoMenu {
+    width: 40px;
+    position: absolute;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.menuMobile {
+    position: absolute;
+    /*absolute para ele flutuar sobre os itens*/
+    top: 0;
+    left: -100%;
+    /*valor negativo deixa ele para fora da tela*/
+    transition: all 800ms;
+    margin: 10px 5px;
+    list-style: none;
+}
+
+.menuMobile li {
+    list-style: none;
+}
+
+.menuMobile li img {
+    width: 40px;
+    margin: 15px 0;
+}
+
+.menuMobile.menuAberto {
+    position: fixed;
+    left: 0%;
+    top: 60px;
+}
+
+
+/*------------------------------------profile settings--------------------------------------*/
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.container .profile {
+    text-align: center;
+}
+
+.container .profile img {
+    width: 85px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-top: 30px;
+    box-shadow: 0 0 10px #f28d13;
+    animation: floating 2s ease-in-out infinite;
+}
+
+.container .profile h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 1px 1px 3px #f28d13;
+    margin-top: 10px;
+}
+
+.container .profile span {
+    color: #e29024;
+    display: block;
+    font-size: 15pt;
+    font-weight: 100;
+    text-shadow: none;
+    margin-top: 7px;
+}
+
+.container .profile h2 {
+    font-size: 15px;
+    font-weight: 100;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+/*-------------------------------list-links config-----------------------------*/
+
+.list-links {
+    list-style: none;
+}
+
+.list-links li {
+    margin: 10px 20px;
+    font-size: 10px;
+}
+
+.list-links li span {
+    display: block;
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+.list-links li a {
+    background-image: linear-gradient(180deg, #e29024, #cc6512);
+    box-shadow: 0 0 7px #432ff3;
+    padding: 20px;
+    display: block;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.list-links li .btn-color-red {
+    background-image: linear-gradient(180deg, #db1f19, #a00808);
+}
+
+.list-links li .btn-color-blue {
+    background-image: linear-gradient(180deg, #3d92f3, #361bce)
+}
+
+
+/*-------------------------------- hover effect -------------------------------*/
+
+.list-links li a:hover {
+    background-image: linear-gradient(180deg, #cc6512, #e29024);
+}
+
+.list-links li .btn-color-red:hover {
+    background-image: linear-gradient(180deg, #a00808, #db1f19);
+}
+
+.list-links li .btn-color-blue:hover {
+    background-image: linear-gradient(180deg, #361bce, #3d92f3);
+}
+
+
+/*-------------------------------- footer --------------------------------*/
+
+.footer {
+    margin: 30px 0 0;
+    background-color: #060e53;
+    padding: 10px 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/*------------------------profile pic animation--------------------------------*/
+
+@keyframes floating {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-8px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@media (max-width: 420px) {
+    .container .profile {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    .container .profile h2 {
+        font-size: 18px;
+    }
+}

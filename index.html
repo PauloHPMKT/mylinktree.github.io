@@ -1,296 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MyLinkTree | Paulo</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            html {
-                background-image: linear-gradient(#03043d, #040680, #020fa9);
-            }
-            body {
-                font-family: 'century gothic', sans-serif;
-                font-size: 15px;
-                color: #fff;
-                text-align: center;
-            }
 
-            /*-------------------------------hamburuger menu setting---------------------------*/
-            .botaoMenu {
-                width: 40px;
-                position: absolute;
-                position: fixed;
-                top: 10px;
-                left: 10px;
-                cursor: pointer;
-            }
-            .menuMobile {
-                position: absolute; /*absolute para ele flutuar sobre os itens*/
-                top: 0;
-                left: -100%; /*valor negativo deixa ele para fora da tela*/
-                transition: all 800ms;
-                margin: 10px 5px;
-                list-style: none;
-            }
-            .menuMobile li {
-                list-style: none;
-            }
-            .menuMobile li img {
-                width: 40px;
-                margin: 15px 0;
-            }
-            .menuMobile.menuAberto{
-                position: fixed;
-                left: 0%; 
-                top: 60px;   
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLinkTree | Paulo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            /*------------------------------------profile settings--------------------------------------*/
-            .container {
-                max-width: 80%;
-                margin: 0 auto;
-            }
-            .container .profile {
-                text-align: center;
-            }
-            .container .profile img {
-                width: 85px;
-                border: 2px solid white;
-                border-radius: 50%;
-                margin-top: 30px;
-                box-shadow: 0 0 10px #f28d13;
-                animation: floating 2s ease-in-out infinite;
-            }
-            .container .profile h1 {
-                font-family: 'Orbitron', sans-serif;
-                letter-spacing: 2px;
-                color: white;
-                text-shadow: 1px 1px 3px #f28d13;
-                margin-top: 10px;
-            }
-            .container .profile span {
-                color: #e29024;
-                display: block;
-                font-size: 15pt;
-                font-weight: 100;
-                text-shadow: none;
-                margin-top: 7px;
-            }
-            .container .profile h2 {
-                font-size: 15px;
-                font-weight: 100;
-                color: white;
-                margin-top: 10px;
-                margin-bottom: 15px;
-            }
+<body>
 
-            /*-------------------------------list-links config-----------------------------*/
-            .list-links {
-                list-style: none;
-            }
-            .list-links li {
-                margin: 10px 20px;
-                font-size: 10px;
-            }
-            .list-links li span {
-                display: block;
-                font-weight: 100;
-                margin-top: 5px;
-            }
-            .list-links li a {
-                background-image: linear-gradient(180deg, #e29024, #cc6512);
-                box-shadow: 0 0 7px #432ff3;
-                padding: 20px;
-                display: block;
-                border-radius: 5px;
-                text-decoration: none;
-                color: #fff;
-                font-weight: bold;
-            }
-            .list-links li .btn-color-red {
-                background-image: linear-gradient(180deg, #db1f19, #a00808);
-                
-            }  
-            .list-links li .btn-color-blue {
-                background-image: linear-gradient(180deg, #3d92f3, #361bce)
-            }
+    <!----------------------------------------------------SETTING ASIDE MENU------------------------------------------------->
+    <img class="botaoMenu" src="./img/menu-hamb-removebg.png" alt="menu button">
+    <div class="menuMobile">
+        <ul>
+            <li>
+                <a href="http://www.instagram.com/paulo_devmais" target="_blank">
+                    <img src="./img/instagram-ico-removebg.png" alt="linkInstagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
+                    <img src="./img/linkedin-removebg.png" alt="linkLinkedin">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/pauloHPMKT" target="_blank">
+                    <img src="./img/github-removebg.png" alt="linkGihub">
+                </a>
 
-            /*-------------------------------- hover effect -------------------------------*/
-            .list-links li a:hover {
-                background-image: linear-gradient(180deg, #cc6512, #e29024);
-            }
-            .list-links li .btn-color-red:hover {
-                background-image: linear-gradient(180deg, #a00808, #db1f19);    
-            }
-            .list-links li .btn-color-blue:hover {
-                background-image: linear-gradient(180deg, #361bce, #3d92f3);
-            }
+            </li>
+            <li>
+                <a href="http://wa.me/5585988704658" target="_blank">
+                    <img src="./img/whatsapp-removebg.png" alt="linkWhatsapp">
+                </a>
+            </li>
+        </ul>
+    </div>
 
-            /*-------------------------------- footer --------------------------------*/
-            .footer {
-                margin: 30px 0 0;
-                background-color: #060e53;
-                padding: 10px 0;
-            }
-            .footer a {
-                text-decoration: none;
-                color: #fff;
-                cursor: pointer;
-            }
-           
-            /*------------------------profile pic animation--------------------------------*/
-            @keyframes floating {
-                0% {
-                    transform: translatey(0px);
-                }
-                50% {
-                transform: translatey(-8px);
-                }
-                100% {
-                transform: translatey(0px);
-                }
-            }
-
-            @media (max-width: 420px) {
-                .container .profile {
-                    max-width: 85%;
-                    margin: 0 auto;
-                }
-                .container .profile h2 {
-                    font-size: 18px;
-                }
-
-            }
-            
-        </style>
-    </head>
-    <body>
-
-        <!----------------------------------------------------SETTING ASIDE MENU------------------------------------------------->
-        <img class="botaoMenu" src="./img/menu-hamb-removebg.png" alt="menu button">
-        <div class="menuMobile">
-            <ul>
-                <li>
-                    <a href="http://www.instagram.com/paulo_devmais" target="_blank">
-                        <img src="./img/instagram-ico-removebg.png" alt="linkInstagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
-                        <img src="./img/linkedin-removebg.png" alt="linkLinkedin">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/pauloHPMKT" target="_blank">
-                        <img src="./img/github-removebg.png" alt="linkGihub">
-                    </a>
-                    
-                </li>
-                <li>
-                    <a href="http://wa.me/5585988704658" target="_blank">
-                        <img src="./img/whatsapp-removebg.png" alt="linkWhatsapp">
-                    </a>
-                </li>
-            </ul>
+    <!----------------------------------------------------SETTING MAIN LIST MENU------------------------------------------------->
+    <div class="container">
+        <div class="profile">
+            <img src="./img/avatar-pic.png" alt="avatar-paulo">
+            <h1>Paulo Sérgio <span class="span-title">| Software developer & Designer</span></h1>
+            <h2 id="translate">Conheça meus trabalhos | entre em contato comigo</h2>
         </div>
+        <div>
+            <ul class="list-links">
 
-        <!----------------------------------------------------SETTING MAIN LIST MENU------------------------------------------------->
-        <div class="container">
-            <div class="profile">
-                <img src="./img/avatar-pic.png" alt="avatar-paulo">
-                <h1>Paulo Sérgio  <span class="span-title">| Software developer & Designer</span></h1>
-                <h2 id="translate">Conheça meus trabalhos | entre em contato comigo</h2>
-            </div> 
-            <div>
-                <ul class="list-links">
-                    
-                    <li>
-                        <a href="http://www.instagram.com/dev.mais" target="_blank">
+                <li>
+                    <a href="http://www.instagram.com/dev.mais" target="_blank">
                             DEV++
                             <span>Acesse nosso catálogo no feed.</span>  
                         </a>
-                    </li>
-                    <li>
-                        <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">
+                </li>
+                <li>
+                    <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">
                             HP MARKETING VISUAL
                             <span>Conheça meu trabalho de designer e desenvolvimento web e marketing digital.</span>
                         </a>
-                    </li>
+                </li>
 
-                    Cursos online | Invista em sua carreira
-                    <li>
-                        <a href="http://bit.ly/workshopGratuitoProgramacao" target="_blank"  class="btn-color-red">
-                            WORKSHOP PROGRAMAÇÃO 100% GRATUÍTO E ONLINE
-                            <span>Quer dar os primeiros passos com programação Web?</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href=https://bit.ly/fullstackjavaScript target="_blank" class="btn-color-red">
+                Cursos online | Invista em sua carreira
+                <li>
+                    <a href=https://bit.ly/fullstackjavaScript target="_blank" class="btn-color-red">
                             CURSO FORMAÇÃO FULLSTACK JAVASCRIPT - DO ZERO AO MERCADO
                             <span>Quer se tornar um desenvoledor de alto nível e entrar no radar das empresas?</span>
                         </a>
-                    </li> 
-                    <li>
-                        <a href="http://bit.ly/fabricadeAppsSujeito" target="_blank" class="btn-color-red">
+                </li>
+                <li>
+                    <a href="http://bit.ly/workshopGratuitoProgramacao" target="_blank" class="btn-color-red">
+                            WORKSHOP PROGRAMAÇÃO 100% GRATUÍTO E ONLINE
+                            <span>Quer dar os primeiros passos com programação Web?</span>
+                        </a>
+                </li>
+                <li>
+                    <a href="http://bit.ly/fabricadeAppsSujeito" target="_blank" class="btn-color-red">
                             FABRICA DE APLICATIVOS - REACT NATIVE
                             <span>Crie Apps mobile nativos com uma das bibliotecas mais usadas no mundo</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="http://bit.ly/designCanvasonline" target="_blank" class="btn-color-blue">
+                </li>
+                <li>
+                    <a href="http://bit.ly/designCanvasonline" target="_blank" class="btn-color-blue">
                             CURSO DESIGN CANVAS - DO BÁSICO AO AVANÇADO
                             <span>Aprenda a criar seus próprios designes, crie seus próprios posts de conteúdo</span>
                         </a>
-                    </li>
-                    Desenvolva suas habilidades e trabalhe com a internet
-                    <li>
-                        <a href="http://bit.ly/treinamentoCVLonline" target="_blank" class="btn-color-blue">
-                            TREINAMENTO CHORA OU VENDE LENÇOS - CVL
-                            <span>Quer aprender como trabalhar pela internet e formar sua renda através da internet?</span>
-                        </a>
-                    </li> 
-                </ul>
-            </div>
+                </li>
+            </ul>
         </div>
-        <footer class="footer">
-            Developed By <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">HP Marketing Visual</a> 2021
-         </footer>
+    </div>
+    <footer class="footer">
+        Developed By <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">HP Marketing Visual</a> 2021
+    </footer>
 
-        <script>
-            
-            let menuMobile = document.querySelector('.menuMobile')
-            //menuMobile.classList.add('teste') // add adiciona uma class e remove retira
-            let botaoMenu = document.querySelector('.botaoMenu')
-            let dimension = document.querySelector('#dimension')
+    <script src="script.js"></script>
 
+</body>
 
-            let aberto = false // flag variavel de controle (true === aberto // false === fechado)
-            //controlando o estado de uma aplicaçao 
-
-
-            botaoMenu.onclick = function abrirFechar() {
-
-                if(aberto === true) {
-                    aberto = false
-                    menuMobile.classList.remove('menuAberto')
-                    
-                    //botaoMenu.innerText = 'abrir menu'
-
-                } else if (aberto === false) {
-                    aberto = true
-                    menuMobile.classList.add('menuAberto') 
-                    //botaoMenu.innerText = 'fechar menu'
-                }
-                
-            }
-        </script>
-        
-    </body>
 </html>
