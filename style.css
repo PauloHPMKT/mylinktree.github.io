@@ -1,193 +1,249 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700&display=swap);
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
 }
-
 html {
-    background-image: linear-gradient(#03043d, #040680, #020fa9);
+  background-image: radial-gradient(#3419ce, #0c0342);
+  height: 100%;
 }
-
 body {
-    font-family: 'century gothic', sans-serif;
-    font-size: 15px;
-    color: #fff;
-    text-align: center;
+  font-family: "Orbitron", sans-serif;
+  transition: background 0.6s linear;
 }
-
-
-/*-------------------------------hamburuger menu setting---------------------------*/
-
-.botaoMenu {
-    width: 40px;
-    position: absolute;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-}
-
-.menuMobile {
-    position: absolute;
-    /*absolute para ele flutuar sobre os itens*/
-    top: 0;
-    left: -100%;
-    /*valor negativo deixa ele para fora da tela*/
-    transition: all 800ms;
-    margin: 10px 5px;
-    list-style: none;
-}
-
-.menuMobile li {
-    list-style: none;
-}
-
-.menuMobile li img {
-    width: 40px;
-    margin: 15px 0;
-}
-
-.menuMobile.menuAberto {
-    position: fixed;
-    left: 0%;
-    top: 60px;
-}
-
-
-/*------------------------------------profile settings--------------------------------------*/
 
 .container {
-    max-width: 80%;
-    margin: 0 auto;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.container .root {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.container input {
+  visibility: hidden;
+}
+.container label {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .container .profile {
-    text-align: center;
+  text-align: center;
+  padding-top: 40px;
+}
+.container .profile img {
+  width: 120px;
+  border: 3px solid #eca011;
+  box-shadow: 0 0 5px #eca011;
+  padding: 7px;
+  border-radius: 100%;
+  animation: floating 2s ease-in-out infinite;
 }
 
-.container .profile img {
-    width: 85px;
-    border: 2px solid white;
-    border-radius: 50%;
-    margin-top: 30px;
-    box-shadow: 0 0 10px #f28d13;
-    animation: floating 2s ease-in-out infinite;
+@keyframes floating {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 .container .profile h1 {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 2px;
-    color: white;
-    text-shadow: 1px 1px 3px #f28d13;
-    margin-top: 10px;
+  margin: 15px 0 10px 0;
+  font-size: 40px;
+  color: #fff;
 }
 
-.container .profile span {
-    color: #e29024;
-    display: block;
-    font-size: 15pt;
-    font-weight: 100;
-    text-shadow: none;
-    margin-top: 7px;
+.container .profile .span-title {
+  color: #eca011;
+  font-size: 20px;
+  text-shadow: 0 0 2px #121212;
 }
 
-.container .profile h2 {
-    font-size: 15px;
-    font-weight: 100;
-    color: white;
-    margin-top: 10px;
-    margin-bottom: 15px;
+.container .social-links ul {
+  display: flex;
+}
+.container .social-links ul li {
+  margin: 30px auto;
 }
 
-
-/*-------------------------------list-links config-----------------------------*/
-
-.list-links {
-    list-style: none;
+.container .social-links ul li img {
+  width: 45px;
+}
+.container .content {
+  margin: 40px 0;
+}
+.container .content .banner {
+  background-image: url("./img/fullstack-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #3a1af1;
+}
+.container .content .banner .fullstack,
+.container .content .banner .matricula {
+  width: 50%;
+}
+.container .content .banner img {
+  width: 440px;
+  margin: 20px;
+}
+.container .content .banner .matricula {
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px;
+}
+.container .content .banner .matricula span {
+  color: red;
+}
+.container .content .banner .matricula p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: none;
+  margin: 10px 0;
+}
+.container .content .banner .matricula button {
+  width: 350px;
+  height: 60px;
+  background-color: red;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 13px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.container .content .banner .matricula button a {
+  color: #fff;
+}
+.container .content .banner .matricula button:hover {
+  box-shadow: 0 0 30px #3a1af1;
+  transition: 200ms ease;
+  transform: scale(1.1);
 }
 
-.list-links li {
-    margin: 10px 20px;
-    font-size: 10px;
+.container .links-list li {
+  background-image: linear-gradient(180deg, #e29024, #cc6512);
+  box-shadow: 0 0 7px #432ff3;
+  margin: 15px 0;
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 10px;
 }
-
-.list-links li span {
-    display: block;
-    font-weight: 100;
-    margin-top: 5px;
+.container .links-list li a,
+.container .links-list li a span {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  text-shadow: 0 0 10px #eca011;
 }
-
-.list-links li a {
-    background-image: linear-gradient(180deg, #e29024, #cc6512);
-    box-shadow: 0 0 7px #432ff3;
-    padding: 20px;
-    display: block;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.list-links li .btn-color-red {
-    background-image: linear-gradient(180deg, #db1f19, #a00808);
-}
-
-.list-links li .btn-color-blue {
-    background-image: linear-gradient(180deg, #3d92f3, #361bce)
-}
-
-
-/*-------------------------------- hover effect -------------------------------*/
-
-.list-links li a:hover {
-    background-image: linear-gradient(180deg, #cc6512, #e29024);
-}
-
-.list-links li .btn-color-red:hover {
-    background-image: linear-gradient(180deg, #a00808, #db1f19);
-}
-
-.list-links li .btn-color-blue:hover {
-    background-image: linear-gradient(180deg, #361bce, #3d92f3);
-}
-
-
-/*-------------------------------- footer --------------------------------*/
 
 .footer {
-    margin: 30px 0 0;
-    background-color: #060e53;
-    padding: 10px 0;
+  background-color: #0c0342;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
 }
 
-.footer a {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
+/*------------------------------------Change mode blue effect-----------------------------------------*/
+body.white {
+  background-color: #fff;
 }
 
-
-/*------------------------profile pic animation--------------------------------*/
-
-@keyframes floating {
-    0% {
-        transform: translatey(0px);
-    }
-    50% {
-        transform: translatey(-8px);
-    }
-    100% {
-        transform: translatey(0px);
-    }
+body.white .profile h1 {
+  color: #3419ce;
 }
 
-@media (max-width: 420px) {
-    .container .profile {
-        max-width: 85%;
-        margin: 0 auto;
-    }
-    .container .profile h2 {
-        font-size: 18px;
-    }
+/*------------------------------------Media query-----------------------------------------*/
+@media (max-width: 1160px) {
+  .container .content .banner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .content .banner .matricula,
+  .container .content .banner .fullstack {
+    font-size: 15px;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1150px) and (min-width: 1025px) {
+  .container .content .banner img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 940px) {
+  .container .content .banner img {
+    width: 340px;
+  }
+}
+
+@media (max-width: 939px) and (min-width: 820px) {
+  .container .content .banner img {
+    width: 300px;
+  }
+  .container .content .banner .matricula {
+    font-size: 15px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 440px) {
+  .container .profile .span-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 820px) and (min-width: 320px) {
+  label {
+    width: 50px;
+    font-size: 10px;
+  }
+  .container .social-links ul li img {
+    width: 35px;
+  }
+  .container .content .banner img {
+    width: 260px;
+  }
+  .container .content .banner .matricula {
+    font-size: 15px;
+    width: 90%;
+  }
+  .container .content .banner .matricula button {
+    width: 260px;
+    font-size: 17px;
+  }
+  .container .links-list li a span {
+    font-size: 10px;
+  }
+  .footer {
+    font-size: 10px;
+  }
 }

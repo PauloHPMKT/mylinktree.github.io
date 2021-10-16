@@ -1,101 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyLinkTree | Paulo</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mylinktree | Paulo Dev++</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1QDQYEDXF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B1QDQYEDXF');
+  </script>
 </head>
-
 <body>
+  <main class="container">
 
-    <!----------------------------------------------------SETTING ASIDE MENU------------------------------------------------->
-    <img class="botaoMenu" src="./img/menu-hamb-removebg.png" alt="menu button">
-    <div class="menuMobile">
+    <div class="root">
+      <input type="checkbox" id="btn" name="btn">
+      <label for="btn" id="label">Click here to White Theme</label>
+    </div>
+    
+    <div class="profile">
+      <img src="./img/avatar-pic.png" alt="avatar-paulo">
+      <h1 id="mainName">Paulo Sérgio</h1>
+      <span class="span-title">Software developer & Designer</span>
+      <!--<h2 id="translate">Conheça meus trabalhos | entre em contato comigo</h2>-->
+    </div> 
+    <div class="social-links">
+      <ul>
+        <li>
+          <a href="http://www.instagram.com/paulo_devmais" target="_blank">
+            <img src="./img/instagram-ico-removebg.png" alt="instagram">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.github.com/PauloHPMKT" target="_blank">
+            <img src="./img/github-removebg.png" alt="gitHub">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
+            <img src="./img/linkedin-removebg.png" alt="linkdin">
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/5585988704658" target="_blank">
+            <img src="./img/whatsapp-removebg.png" alt="whatsapp">
+          </a>
+        </li>
+        <li>
+          <a href="https://youtube.com/channel/UCuBdQPQKGE-AC0bEHRmc2cQ" target="_blank">
+            <img src="./img/youtube-removebg-preview.png" alt="youtube-dev++">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="banner">
+        <div class="fullstack">
+            <img src="./img/java-removebg-preview.png" alt="formação fullstack">
+        </div>
+        <div class="matricula">
+            Quer aprender a stack de tecnologia <span>mais requisitada</span> do mercado?
+            comece do zero e prepare-se para o mercado de trabalho 
+            <p>{ JavaScript é a linguagem de programação com mais oferta de trabaho no Brasil e no esterior }</p>
+            <button class="button">
+              <a href="https://bit.ly/fullstackjavaScript" target="_blank">Quero me inscrever agora!</a>
+            </button>   
+        </div>
+      </div>
+      <div class="links-list">
         <ul>
-            <li>
-                <a href="http://www.instagram.com/paulo_devmais" target="_blank">
-                    <img src="./img/instagram-ico-removebg.png" alt="linkInstagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/public-profile/in/paulo-sérgio-77a355ab" target="_blank">
-                    <img src="./img/linkedin-removebg.png" alt="linkLinkedin">
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/pauloHPMKT" target="_blank">
-                    <img src="./img/github-removebg.png" alt="linkGihub">
-                </a>
-
-            </li>
-            <li>
-                <a href="http://wa.me/5585988704658" target="_blank">
-                    <img src="./img/whatsapp-removebg.png" alt="linkWhatsapp">
-                </a>
-            </li>
+          <li>
+            <a href="http://www.instagram.com/dev.mais" target="_blank">
+                DEV++
+                <span>Aqui você ncrementa a variável do seu conhecimento</span>  
+            </a>
+          </li>
+          <li>
+            <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">
+                HP DESIGN & WEB
+                <span>Conheça meu trabalho de designer e desenvolvimento web e marketing digital.</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://bit.ly/workshopGratuitoProgramacao" target="_blank"  class="btn-color-red">
+                WORKSHOP PROGRAMAÇÃO 100% GRATUÍTO E ONLINE
+                <span>Quer dar os primeiros passos com programação Web?</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://bit.ly/fabricadeAppsSujeito" target="_blank" class="btn-color-red">
+                FABRICA DE APLICATIVOS - REACT NATIVE
+                <span>Crie Apps mobile nativos com uma das bibliotecas mais usadas no mundo</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://bit.ly/designCanvasonline" target="_blank" class="btn-color-blue">
+                CURSO DESIGN CANVAS - DO BÁSICO AO AVANÇADO
+                <span>Aprenda a criar seus próprios designes, crie seus próprios posts de conteúdo</span>
+            </a>
+          </li>
         </ul>
+      </div>
     </div>
+  </main>
+  <footer class="footer">
+    Developed By <a href="http://www.instagram.com/hpmarketingvisual">@HP Design & Web</a> 2021
+  </footer>
 
-    <!----------------------------------------------------SETTING MAIN LIST MENU------------------------------------------------->
-    <div class="container">
-        <div class="profile">
-            <img src="./img/avatar-pic.png" alt="avatar-paulo">
-            <h1>Paulo Sérgio <span class="span-title">| Software developer & Designer</span></h1>
-            <h2 id="translate">Conheça meus trabalhos | entre em contato comigo</h2>
-        </div>
-        <div>
-            <ul class="list-links">
-
-                <li>
-                    <a href="http://www.instagram.com/dev.mais" target="_blank">
-                            DEV++
-                            <span>Acesse nosso catálogo no feed.</span>  
-                        </a>
-                </li>
-                <li>
-                    <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">
-                            HP MARKETING VISUAL
-                            <span>Conheça meu trabalho de designer e desenvolvimento web e marketing digital.</span>
-                        </a>
-                </li>
-
-                Cursos online | Invista em sua carreira
-                <li>
-                    <a href=https://bit.ly/fullstackjavaScript target="_blank" class="btn-color-red">
-                            CURSO FORMAÇÃO FULLSTACK JAVASCRIPT - DO ZERO AO MERCADO
-                            <span>Quer se tornar um desenvoledor de alto nível e entrar no radar das empresas?</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="http://bit.ly/workshopGratuitoProgramacao" target="_blank" class="btn-color-red">
-                            WORKSHOP PROGRAMAÇÃO 100% GRATUÍTO E ONLINE
-                            <span>Quer dar os primeiros passos com programação Web?</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="http://bit.ly/fabricadeAppsSujeito" target="_blank" class="btn-color-red">
-                            FABRICA DE APLICATIVOS - REACT NATIVE
-                            <span>Crie Apps mobile nativos com uma das bibliotecas mais usadas no mundo</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="http://bit.ly/designCanvasonline" target="_blank" class="btn-color-blue">
-                            CURSO DESIGN CANVAS - DO BÁSICO AO AVANÇADO
-                            <span>Aprenda a criar seus próprios designes, crie seus próprios posts de conteúdo</span>
-                        </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <footer class="footer">
-        Developed By <a href="http://www.instagram.com/hpmarketingvisual" target="_blank">HP Marketing Visual</a> 2021
-    </footer>
-
-    <script src="script.js"></script>
-
+  <script src="main.js"></script>
 </body>
-
 </html>
