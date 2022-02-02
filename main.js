@@ -1,14 +1,16 @@
-const btn = document.querySelector('#btn')
-let label = document.querySelector('#label')
+const label = document.querySelectorAll('input')
+let slideBorder = document.querySelector('.slide-controls')
 
 
-btn.addEventListener('change', () => {
-    let toggleChange = document.body.classList.toggle('white')
-    if(toggleChange) {
-        label.innerHTML = 'Click here to Blue Theme'
-        label.style.color = '#3419ec'
-    } else {
-        label.innerHTML = 'Click here to White Theme'
-        label.style.color = '#fff'
-    }
-})
+label.forEach(input => input.addEventListener('click', (e) => {
+  let target = e.target.id
+  if(target === 'light') {
+    document.body.classList.add('white')
+    slideBorder.style.border = '4px solid #3419ce'
+  } else {
+    document.body.classList.remove('white')
+    slideBorder.style.border = ''
+  }
+}))
+
+
