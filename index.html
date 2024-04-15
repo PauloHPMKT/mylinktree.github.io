@@ -69,7 +69,7 @@
               <span>Instagram</span>
             </a>
           </li>
-          <li>
+          <li id="showMailModal">
             <i class="fa-regular fa-envelope"></i>
             <span>Envie-me uma mensagem</span>
           </li>
@@ -84,7 +84,11 @@
             <input type="text" name="name" required placeholder="Insira aqui seu nome" />
             <input type="email" name="email" required placeholder="Insira aqui seu E-mail" />
             <textarea cols="30" rows="10" name="message" placeholder="Escreva sua mensagem..." required></textarea>
-            <button type="submit">Send</button>
+            <button class="btn_submit" type="submit">
+              <code>
+                Enviar E-mail
+              </code>
+            </button>
 
             <input type="hidden" name="_subject" value="Nova mensagem Linktree">
             <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
