@@ -75,6 +75,23 @@
           </li>
         </ul>
       </div>
+      <div class="send_email">
+        <div class="email_box">
+          <h2>Gostaria de enviar E-mail</h2>
+          <div class="divisor"></div>
+          <span>Quer entrar em contato comigo? é só preencher os campos abaixo!</span>
+          <form action="https://formsubmit.co/pauloserg861@gmail.com" method="POST">
+            <input type="text" name="name" required placeholder="Insira aqui seu nome" />
+            <input type="email" name="email" required placeholder="Insira aqui seu E-mail" />
+            <textarea cols="30" rows="10" name="message" placeholder="Escreva sua mensagem..." required></textarea>
+            <button type="submit">Send</button>
+
+            <input type="hidden" name="_subject" value="Nova mensagem Linktree">
+            <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       Developed By &lt; Paulo.Sergio /&gt; 

@@ -23,16 +23,6 @@ body {
   margin: 0 auto;
   min-height: 85vh;
 }
-.container input {
-  visibility: hidden;
-}
-.container label {
-  display: inline-block;
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  cursor: pointer;
-}
 
 /** ---------------------- Profile ---------------------- */
 .container .profile {
@@ -71,7 +61,8 @@ body {
   width: 100%;
 }
 
-.container .profile h3 {
+.container .profile h3,
+.container .send_email .email_box h2 {
   font-weight: 600;
   background: linear-gradient(121.57deg, #a83947 20.77%, #f7b93e 90.15%);
   -webkit-background-clip: text;
@@ -146,6 +137,70 @@ body {
 .footer a {
   color: #ffa600;
   text-decoration: none;
+}
+
+.send_email {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #00000070;
+}
+
+.send_email .email_box {
+  width: 500px;
+  min-height: 300px;
+  background-color: #08013C;
+  box-shadow: 0 0 15px #00000124;
+  border-radius: 10px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+.send_email .email_box .divisor {
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(121.57deg, #a83947 20.77%, #f7b93e 150.15%);
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.send_email .email_box span {
+  font-size: 14px;
+  color: #7c7c7c;
+}
+
+.send_email .email_box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.send_email .email_box form input {
+  height: 32px;
+}
+
+.send_email .email_box form input,
+.send_email .email_box form textarea {
+  padding: 5px 10px;
+  border: #00054b 2px solid;
+  background-color: #040023;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.send_email .email_box form input::placeholder,
+.send_email .email_box form textarea::placeholder {
+  color: #7c7c7c;
+}
+  
+.send_email .email_box form textarea {
+  resize: none;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*------------------------------------Change mode blue effect-----------------------------------------*/
