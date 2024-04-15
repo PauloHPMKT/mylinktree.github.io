@@ -1,6 +1,6 @@
 const label = document.querySelectorAll('input')
+const year = document.querySelector('#year')
 let slideBorder = document.querySelector('.slide-controls')
-
 
 label.forEach(input => input.addEventListener('click', (e) => {
   let target = e.target.id
@@ -13,4 +13,7 @@ label.forEach(input => input.addEventListener('click', (e) => {
   }
 }))
 
+// footer year config
+const currentYear = new Date().getFullYear();
+year.textContent = currentYear;
 

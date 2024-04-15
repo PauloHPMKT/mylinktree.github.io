@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@100;200;300;400;500;600;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700&display=swap);
-
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;800&display=swap);
 @import './slide-theme.css';
 
 * {
@@ -12,23 +12,17 @@
   outline: none;
 }
 html {
-  background-image: radial-gradient(#3419ce, #0c0342);
-  height: 100%;
+  background-color: #08013C;
 }
 body {
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   transition: background 0.6s linear;
 }
 
 .container {
-  max-width: 80%;
   margin: 0 auto;
+  min-height: 85vh;
 }
-/*.container .root {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}*/
 .container input {
   visibility: hidden;
 }
@@ -40,14 +34,18 @@ body {
   cursor: pointer;
 }
 
+/** ---------------------- Profile ---------------------- */
 .container .profile {
-  text-align: center;
-  padding-top: 40px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.container .profile img {
+.container .profile > img {
   width: 120px;
-  border: 3px solid #eca011;
-  box-shadow: 0 0 5px #eca011;
+  border: 3px solid #9e6803;
+  box-shadow: 0 0 3px #eca011;
   padding: 7px;
   border-radius: 100%;
   animation: floating 2s ease-in-out infinite;
@@ -65,116 +63,89 @@ body {
   }
 }
 
-.container .profile h1 {
-  margin: 15px 0 10px 0;
-  font-size: 40px;
-  color: #fff;
+.container .profile .title {
+  width: 230px;
+  margin-top: 20px;
+}
+.container .profile .title img {
+  width: 100%;
 }
 
-.container .profile .span-title {
-  color: #eca011;
-  font-size: 20px;
-  text-shadow: 0 0 2px #121212;
+.container .profile h3 {
+  font-weight: 600;
+  background: linear-gradient(121.57deg, #a83947 20.77%, #f7b93e 90.15%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-text-fill-color: transparent;
 }
-
+.container .social-links {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
 .container .social-links ul {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 600px;
 }
 .container .social-links ul li {
-  padding: 5%;
-  font-size: 50px;
+  border: #00054b 2px solid;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  color: #7c7c7c;
+  transition: all 0.6s ease;
+  overflow: hidden;
 }
+.container .social-links ul li:hover {
+  background-color: #01031b;
+  border: 2px solid #ffa600;
+  color: #ffa600;
+}
+.container .social-links ul li span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 .container .social-links ul li a {
   text-decoration: none;
-  color: #ffa600;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 .container .social-links ul li a:hover {
   text-shadow: 0 0 15px #00054b;
-  transition: .4s ease;
 }
-.container .content {
-  margin: 40px 0;
-}
-.container .content .banner {
-  background-image: url("./img/fullstack-banner.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  font-family: "Oswald", sans-serif;
-  border-radius: 10px;
-  box-shadow: 0 0 30px #3a1af1;
-}
-.container .content .banner .fullstack,
-.container .content .banner .matricula {
-  width: 50%;
-}
-.container .content .banner img {
-  width: 440px;
-  margin: 20px;
-}
-.container .content .banner .matricula {
-  color: #fff;
-  font-size: 17px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 20px;
-}
-.container .content .banner .matricula span {
-  color: red;
-}
-.container .content .banner .matricula p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: 100;
-  text-transform: none;
-  margin: 10px 0;
-}
-.container .content .banner .matricula button {
-  width: 350px;
-  height: 60px;
-  background-color: red;
-  color: white;
-  font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 13px;
-  margin-top: 20px;
+.container .social-links ul li:last-child {
+  padding: 4px;
   cursor: pointer;
-}
-.container .content .banner .matricula button a {
-  color: #fff;
-}
-.container .content .banner .matricula button:hover {
-  box-shadow: 0 0 30px #3a1af1;
-  transition: 200ms ease;
-  transform: scale(1.1);
-}
-
-.container .links-list li {
-  background-image: linear-gradient(180deg, #e29024, #cc6512);
-  box-shadow: 0 0 7px #432ff3;
-  margin: 15px 0;
-  padding: 20px 20px;
-  text-align: center;
-  border-radius: 10px;
-}
-.container .links-list li a,
-.container .links-list li a span {
-  display: block;
-  color: #fff;
-  padding: 5px;
-  text-shadow: 0 0 10px #eca011;
 }
 
 .footer {
-  background-color: #0c0342;
-  padding: 40px;
-  text-align: center;
-  color: #fff;
+  position: fixed;
+  bottom: 0;
+  font-size: 14px;
+  color: #7c7c7c;
+  border-top: 1px solid #040023;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+.footer a {
+  color: #ffa600;
+  text-decoration: none;
 }
 
 /*------------------------------------Change mode blue effect-----------------------------------------*/
@@ -187,23 +158,6 @@ body {
 }
 
 /*------------------------------------Media query-----------------------------------------*/
-@media (max-width: 1160px) {
-  .container .profile {
-    padding-top: 120px;
-  }
-  .container .content .banner {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .content .banner .matricula,
-  .container .content .banner .fullstack {
-    font-size: 15px;
-    width: 90%;
-    text-align: center;
-  }
-}
-
 @media (max-width: 1150px) and (min-width: 1025px) {
   .container .content .banner img {
     width: 400px;
