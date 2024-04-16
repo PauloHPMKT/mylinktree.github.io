@@ -26,7 +26,7 @@ body {
 
 /** ---------------------- Profile ---------------------- */
 .container .profile {
-  padding-top: 100px;
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,13 +110,13 @@ body {
   color: inherit;
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
 }
 .container .social-links ul li a:hover {
   text-shadow: 0 0 15px #00054b;
 }
 .container .social-links ul li:last-child {
-  padding: 4px;
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -267,10 +267,30 @@ body {
       width: 260px;
     }
 }
+
+@media screen and (max-width: 700px) {
+  .container {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 520px) {
+  .container .send_email .email_box {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px 5px;
+  }
+}
+
 @media (max-width: 820px) and (min-width: 320px) {
   label {
     width: 50px;
     font-size: 10px;
+  }
+
+  .container .social-links {
+    width: 90%;
+    margin: 25px auto;
   }
   .container .social-links ul li img {
     width: 35px;
