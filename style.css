@@ -149,6 +149,7 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: all 0.6s ease;
+  overflow-y: hidden;
 }
 
 .send_email .email_box {
@@ -271,6 +272,16 @@ body {
 @media screen and (max-width: 820px) {
   .container {
     margin-bottom: 20%;
+  }
+  .container .send_email {
+    height: 800px;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+  }
+
+  .footer {
+    z-index: 2000;
   }
 }
 
